@@ -1,0 +1,45 @@
+
+Taiko Node Commands
+
+1- sudo apt autoremove docker* container* -y
+2- sudo apt install jq curl wget tar zip unzip -y
+3- curl -sSL https://get.docker.com | bash -
+4- sudo curl -SL https://github.com/docker/compose/releases/download/v2.14.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+5- sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+6- sudo chmod +x /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+7- sudo systemctl restart docker.service
+
+8- git clone https://github.com/taikoxyz/simple-taiko-node.git
+cd simple-taiko-node
+
+9- apt install ufw -y 
+ufw allow ssh 
+ufw allow https 
+ufw allow http 
+ufw allow 31244
+ufw allow 31245
+ufw allow 8545
+ufw allow 8546
+ufw allow 6060
+ufw allow 30303
+ufw allow 3000
+ufw enable
+
+10- docker compose down
+11- cp .env.sample .env
+12- nano .env 
+
+write true and add private key and address wallet
+
+13- docker compose up -d
+14- sudo docker-compose logs -f
+
+
+delete nod :  
+
+cd simple-taiko-node
+docker compose down -v
+rm -f .env
