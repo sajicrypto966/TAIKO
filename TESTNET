@@ -1,5 +1,5 @@
 
-Taiko Node Commands lfg........
+Taiko Node Commands lfg...........
 
 1- sudo apt autoremove docker* container* -y
 2- sudo apt install jq curl wget tar zip unzip -y
